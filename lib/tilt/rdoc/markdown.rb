@@ -5,7 +5,7 @@ require "tilt/template"
 module Tilt
   module RDoc
     class Markdown < ::Tilt::Template
-      VERSION = "0.0.1"
+      VERSION = "0.0.2"
 
       def prepare # :nodoc:
         @engine = ::RDoc::Markdown.new
