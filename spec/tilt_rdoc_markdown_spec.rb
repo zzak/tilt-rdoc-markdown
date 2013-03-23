@@ -21,6 +21,18 @@ describe Tilt::RDoc::Markdown do
   it "should prepare and evaluate templates on #render" do
     template = Tilt::RDoc::Markdown.new { |t| "# Hello World!" }
     doc = Nokogiri::HTML(template.render)
-    assert_equal "Hello World!", doc.search("h1").text
+    assert_equal 'Hello World!¶ ↑', doc.search("h1").text
+  end
+
+  it "should render with pipe" do
+    template = Tilt::RDoc::Markdown.new(:pipe => true) { |t| "# Hello World!" }
+    doc = Nokogiri::HTML(template.render)
+    assert_equal 'Hello World!', doc.search("h1").text
+  end
+
+  it "should render with toc" do
+    template = Tilt::RDoc::Markdown.new(:toc => true) { |t| "# Hello World!" }
+    result = template.render
+    assert_equal "<li><a href='#label-Hello+World%21'>Hello World!</a></li>", result
   end
 end
