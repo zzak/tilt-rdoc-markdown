@@ -1,11 +1,9 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'tilt/rdoc/markdown'
+version = File.read(File.expand_path('../TILT_RDOC_MARKDOWN_VERSION', __FILE__)).strip
 
 Gem::Specification.new do |spec|
   spec.name          = "tilt-rdoc-markdown"
-  spec.version       = Tilt::RDoc::Markdown::VERSION
+  spec.version       = version
   spec.authors       = ["Zachary Scott"]
   spec.email         = ["zachary@zacharyscott.net"]
   spec.description   = %q{Tilt template to render Markdown using RDoc}

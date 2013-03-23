@@ -5,7 +5,6 @@ require "tilt/template"
 module Tilt
   module RDoc
     class Markdown < ::Tilt::Template
-      VERSION = "0.1.0"
 
       attr_accessor :rdoc_options
 
