@@ -1,5 +1,7 @@
 # Tilt::Rdoc::Markdown
 
+[![Build Status](https://travis-ci.org/zzak/tilt-rdoc-markdown.png?branch=master)](https://travis-ci.org/zzak/tilt-rdoc-markdown)
+
 Tilt extension to render Markdown using RDoc
 
 ## Installation
