@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 begin
   require_relative 'spec_helper'
 rescue LoadError
