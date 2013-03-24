@@ -8,6 +8,11 @@ rvm:
   - jruby-head
   - rbx-19mode
 matrix:
+  include:
+    - { rvm: 1.9.3, env: tilt=master }
+    - { rvm: 2.0.0, env: tilt=master }
+    - { rvm: ruby-head, env: tilt=master }
+    - { rvm: jruby-head, env: tilt=master }
   allow_failures:
     - rvm: rbx-19mode
 notifications:
